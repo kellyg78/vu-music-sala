@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
+import BotControlPanel from "./bot-control";
 
 interface Room {
   id: number;
@@ -218,9 +219,11 @@ export default function DashboardPage() {
                   <button className="w-full py-2 bg-neon-cyan/20 border border-neon-cyan rounded-lg font-retro text-neon-cyan hover:bg-neon-cyan/30 transition-colors">
                     Import Songs
                   </button>
-                  <button className="w-full py-2 bg-neon-purple/20 border border-neon-purple rounded-lg font-retro text-neon-purple hover:bg-neon-purple/30 transition-colors">
-                    Bot Settings
-                  </button>
+                  <Link href="/dashboard/imvu-connect">
+                    <button className="w-full py-2 bg-neon-purple/20 border border-neon-purple rounded-lg font-retro text-neon-purple hover:bg-neon-purple/30 transition-colors">
+                      Connect Bot
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>
